@@ -1,0 +1,121 @@
+---
+title: "practical-1"
+author: "Sumit"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+# M.Sc-2    
+## Q-1 
+### Create a new object x that stores the values (2,4,3,5,7,9).Run the following commands on R. Also give your comments.
+```{r}
+x<-c(2,4,3,5,7,9)
+length(x)           #counts no. of elements in the vector.
+sum(x)            #adds all the elements.
+mean(x)          #it calculates the average.
+min(x)          #smallest element of the vector
+max(x)          #largest element of the vector
+range(x)#it returns a vector containing the minimum and maximum of all the given arguments.
+median(x)          #middle value
+quantile(x)          #finding quantiles
+summary(x)          #finding summary
+sort(x)          #sort a vector into ascending or descending order.
+rev(sort(x))          #it reverse the vector 
+order(x)#it will sort the given numbers according to its index in the ascending order
+x[order(x)]       #it gives the values of corresponding indexes
+x[2]              #it returns value of 2nd index
+x[c(2,4)]          #it returns value of 2nd and 4th index.
+x[-2]               #it deletes the value at given index from vector
+x[-c(1,3)]          #removes element from 1st and 3rd index 
+log(x)              # finding the log value of vector x
+log(x,base=10)      #finding the log value to base 10
+log(x,base = 2)     #finding the log value to base 10
+1+x                 #adding 1 to each element of x
+2*x                 #multip1ying 2 to each element of x
+log(1+x)            #finding log after adding 1
+log(2*x)            # finding log after multiplying 2
+sqrt(x)             #finding square root of the vector
+x^2                 #calculating the square. 
+x^0.32              #calculating the power 0.32 of x
+sum(x^0.32)         # calculating the sum of x^0.32
+sin(x)
+cos(x)
+tan(x)
+170166719/31079     #Division 
+170166719%%31079    #Remainder
+170166719%/%31079   #Quotient
+# (i) sort(x) Vs order(x)
+# sort(x) means arranging the elements of vector in increasing order and order(x) means the index
+#positions of this sorted values.
+# (ii)sort(x) Vs x[order(x)]
+# sort(x) means arranging the elements of vector in increasing order while x[order(x)] is giving
+#the corresponding sub vector of x according to the index positions of order(x)
+
+```
+Q-2 Using rep() and seq() as needed,create the vectors
+```{r}
+a<-seq(0,4)
+rep(a,each=5)
+b<-seq(1,5)
+rep(b,5)
+```
+Q-3 Using rep() and seq() as needed,create the vectors
+```{r}
+x<-c(1:5,2:6,3:7,4:8,5:9)
+x
+
+# OR
+rep(0:4,each=5)+seq(1:5)
+
+```
+Q-4 Create and store a sequence of values from 5 to -11 that progress in steps of 0.3
+```{r}
+seq(5,-11,by=-0.3)
+```
+Q-5 The following are a sample of observations on incoming solar radiation at a green house.
+```{r}
+# a) Assign the data to the object called solar.radiation
+solar.radiation=c( 11.1,10.6,6.3,8.8,10.7,11.2,8.9,12.2)
+# b) Find the mean, median,variance of the radiation observations:
+mean(solar.radiation)
+median(solar.radiation)
+var(solar.radiation)
+# c) Add 10 to each observation of the solar.radiation and assign
+#the result to sr10.find the mean,median and variance of sr10.
+#which statistics change and by how much.
+(sr10=solar.radiation+10)
+mean(sr10)
+median(sr10)
+var(sr10)
+# Conclusion: Mean and median increased by 10
+# d) multiply each observation by -2 and assign the result to srm2.
+# find the mean, median and variance of srm2. How do the statistics
+# change Now.
+(srm2=solar.radiation*(-2))
+mean(srm2)
+median(srm2)
+var(srm2)
+# Conclusion: mean is decreased by 9.975,median is decreased by 10.65
+#and variance is increased by 10.575
+# e)
+# There are two formulas commonly used for the variance of a set of numbers .
+# one uses the sample size n in the denominator and the other uses (n-1).
+# Which formula does the var() function in R Use?
+# i) Calculating variance using denominator 'n'
+(y=solar.radiation-mean(solar.radiation))
+(v1=sum(y^2)/length(solar.radiation))
+# ii) Calculating variance using denominator 'n-1'
+(v2=sum(y^2)/(length(solar.radiation)-1))
+# iii) Calculating variance in 'R'
+var(solar.radiation)
+# conclusion: So the var() function in 'R' uses (n-1) as denominator.
+```
+Q_6:To convert the given temperatures (45,77,20,19,101,120,212) Fahrenheit to degree celsius.
+```{r}
+F=c(45,77,20,19,101,120,212) # temperatures in Fahrenheit
+# converting to degree celsius
+c=5*(F-32)/9
+c
+```

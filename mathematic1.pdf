@@ -1,0 +1,31 @@
+---
+title: "Untitled"
+author: "Jasmeen sharma"
+date: "2022-08-07"
+output: html_document
+---
+
+```{r }
+add=function(a,b){a=readline("enter the first no.")
+b=readline("enter the sec no.")
+c=as.numeric(a)+as.numeric(b)
+print(c)}
+add()
+
+```
+```{r}
+subtract=function(a,b){a=readline("enter the first no.")
+b=readline("enter the sec no.")
+c=as.numeric(a)-as.numeric(b)
+print(c)}
+subtract()
+```
+```{r}
+division=function(a,b){a=readline("enter the first no.")
+b=readline("enter the sec no.")
+c=as.numeric(a)/as.numeric(b)
+print(c)}
+division()
+```
+
+
